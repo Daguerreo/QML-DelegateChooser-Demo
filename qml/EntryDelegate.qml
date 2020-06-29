@@ -1,10 +1,11 @@
 import QtQuick 2.0
+import QtQuick.Controls.Material 2.15
 
 Item {
     property alias entryName: titleText.text
     property alias rectColor: rect.color
-    property color textColor: "#111111"
-    property color lineColor: "#aaaaaa"
+    property color textColor: Material.background
+    property color lineColor: Material.foreground
 
     anchors.left: parent.left
     anchors.right: parent.right
@@ -27,7 +28,7 @@ Item {
         anchors.left: rect.right
         anchors.leftMargin: 10
 
-        color: textColor
+        color: lineColor
         font.pixelSize: 14
     }
 
@@ -36,6 +37,6 @@ Item {
         anchors.right: parent.right
         anchors.bottom: parent.bottom
         height: 1
-        color: lineColor
+        color: textColor
     }
 }

@@ -1,4 +1,5 @@
 import QtQuick 2.0
+import QtQuick.Controls.Material 2.15
 
 EntryDelegate {
     rectColor: "lightgreen"
@@ -13,5 +14,6 @@ EntryDelegate {
         width: 400
 
         horizontalAlignment: Text.AlignRight
+        color: Material.accent
     }
 }

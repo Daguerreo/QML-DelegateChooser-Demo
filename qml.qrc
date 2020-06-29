@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>EntryDelegate.qml</file>
+        <file>BoolDelegate.qml</file>
+        <file>StringDelegate.qml</file>
+        <file>IntDelegate.qml</file>
+    </qresource>
+</RCC>

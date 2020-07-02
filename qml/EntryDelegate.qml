@@ -5,7 +5,7 @@ Item {
     property alias entryName: titleText.text
     property alias rectColor: rect.color
     property color textColor: Material.foreground
-    property color lineColor: Material.foreground
+    property color lineColor: Material.color(Material.Grey)
 
     anchors.left: parent.left
     anchors.right: parent.right

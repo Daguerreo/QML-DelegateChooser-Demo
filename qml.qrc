@@ -6,5 +6,6 @@
         <file>qml/EntryDelegate.qml</file>
         <file>qml/BoolDelegate.qml</file>
         <file>qtquickcontrols2.conf</file>
+        <file>qml/QualityDelegate.qml</file>
     </qresource>
 </RCC>

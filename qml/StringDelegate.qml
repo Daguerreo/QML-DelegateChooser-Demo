@@ -2,7 +2,7 @@ import QtQuick 2.0
 import QtQuick.Controls.Material 2.15
 
 EntryDelegate {
-    rectColor: "lightgreen"
+    rectColor: Material.color(Material.LightGreen)
 
     property alias value: txt.text
 

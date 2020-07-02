@@ -9,6 +9,7 @@ Window {
     width: 640
     height: 480
     title: qsTr("Delegate Chooser Demo")
+    color: Material.background
 
     ListView {
         anchors.fill: parent
@@ -19,6 +20,7 @@ Window {
             ListElement { name: "Tolerance"; type: "int"; valueInt: 7; min: 0; max: 10 }
             ListElement { name: "Quality"; type: "quality"; quality: 3 }
             ListElement { name: "Safe Mode"; type: "bool"; valueBool: true }
+            ListElement { name: "Destroy the World"; type: "double"; valueDouble: 1.5 }
         }
     }
 
@@ -53,21 +55,20 @@ Window {
             }
         }
 
-        // an inline delegate with custom property
         DelegateChoice {
             roleValue: "quality"
-            EntryDelegate {
-                rectColor: "cyan"
+            QualityDelegate {
                 entryName: name
-                Slider {
-                    anchors.verticalCenter: parent.verticalCenter
-                    anchors.right: parent.right
-                    anchors.rightMargin: 8
+                value: quality
+            }
+        }
 
-                    from: 0
-                    to: 5
-                    value: quality
-                }
+        // A delegate choice without roleValue act like a "default" in a switch case
+        DelegateChoice {
+            StringDelegate {
+                entryName: name
+                value: "no delegate provided"
+                rectColor: "red"
             }
         }
     }

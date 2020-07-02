@@ -4,7 +4,7 @@ import QtQuick.Controls.Material 2.15
 Item {
     property alias entryName: titleText.text
     property alias rectColor: rect.color
-    property color textColor: Material.background
+    property color textColor: Material.foreground
     property color lineColor: Material.foreground
 
     anchors.left: parent.left
@@ -28,7 +28,7 @@ Item {
         anchors.left: rect.right
         anchors.leftMargin: 10
 
-        color: lineColor
+        color: textColor
         font.pixelSize: 14
     }
 
@@ -37,6 +37,6 @@ Item {
         anchors.right: parent.right
         anchors.bottom: parent.bottom
         height: 1
-        color: textColor
+        color: lineColor
     }
 }

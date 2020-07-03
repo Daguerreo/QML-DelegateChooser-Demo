@@ -15,12 +15,13 @@ Window {
         anchors.fill: parent
         delegate: delegateChooser
         model: ListModel {
-            ListElement { name: "Status"; type: "string"; valueString: "OK" }
-            ListElement { name: "Synchronize"; type: "bool"; valueBool: false }
-            ListElement { name: "Tolerance"; type: "int"; valueInt: 7; min: 0; max: 10 }
+            ListElement { name: "Status"; type: "string"; label: "OK" }
+            ListElement { name: "Synchronize"; type: "bool"; check: false }
+            ListElement { name: "Tolerance"; type: "int"; value: 7; min: 0; max: 10 }
             ListElement { name: "Quality"; type: "quality"; quality: 3 }
-            ListElement { name: "Safe Mode"; type: "bool"; valueBool: true }
-            ListElement { name: "Destroy the World"; type: "double"; valueDouble: 1.5 }
+            ListElement { name: "Safe Mode"; type: "bool"; check: true }
+            ListElement { name: "Destroy the World"; type: "double"; trigger: 1.5 }
+            ListElement { name: "Answer to Live, Universe and everything"; type: "towel"; answer: 42 }
         }
     }
 
@@ -33,7 +34,7 @@ Window {
             BoolDelegate {
                 // explicitely calling model, not actually necessary
                 entryName: model.name
-                value: model.valueBool
+                value: model.check
             }
         }
         DelegateChoice {
@@ -41,7 +42,7 @@ Window {
             StringDelegate {
                 // all these values are model's role
                 entryName: name
-                value: valueString
+                value: label
             }
         }
         DelegateChoice {
@@ -49,7 +50,7 @@ Window {
             IntDelegate {
                 // all these values are model's role
                 entryName: name
-                value: valueInt
+                value: value
                 min: min
                 max: max
             }
@@ -68,7 +69,7 @@ Window {
             StringDelegate {
                 entryName: name
                 value: "no delegate provided"
-                rectColor: "red"
+                rectColor: Material.color(Material.Red)
             }
         }
     }

@@ -21,7 +21,7 @@ Window {
             ListElement { name: "Quality"; type: "quality"; quality: 3 }
             ListElement { name: "Safe Mode"; type: "bool"; check: true }
             ListElement { name: "Destroy the World"; type: "double"; trigger: 1.5 }
-            ListElement { name: "Answer to Live, Universe and everything"; type: "towel"; answer: 42 }
+            ListElement { name: "Answer to Life, Universe and Everything"; type: "towel"; answer: 42 }
         }
     }
 
